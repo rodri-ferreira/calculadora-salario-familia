@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Calculadora Salário família</h1>
+
+    <form action="">
+        <label for="valor"> Salário base:</label>
+        <input type="text" id="valor" autocomplete="off" maxlength="20" name="valor" required placeholder="Valor do salário base">
+        <label for="dependentes"> Número de dependentes (Até 14 anos):</label>
+        <input type="number" id="dependentes" autocomplete="off" maxlength="20" name="dependentes">
+        <label for="valorSalarioFamilia"> Valor do Salário família:</label>
+        <input type="text" id="valorSalarioFamilia" autocomplete="off" maxlength="20" name="valorSalarioFamilia" disabled>
+
+        <p id="mensagem"></p>
+
+        <div class="btns">
+            <button id="calcular">Calcular</button>
+            <button id="limpar">Limpar</button>
+        </div>
+
+    </form>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>$('#valor').mask('000.000.000.000.000,00', {reverse: true});</script>
+    
+
+</body>
+</html>
